@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - run: uv sync --frozen
+      - run: uv run ruff check .
+      - run: uv run ruff format --check .
+
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker build -t team-sdn .
+      - name: Mininet smoke test
+        run: |
+          docker run --rm --privileged -v /lib/modules:/lib/modules:ro team-sdn \
+            mn --custom topology/topology.py --topo montopo --controller ovsc --test pingall

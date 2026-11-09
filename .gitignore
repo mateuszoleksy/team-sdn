@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.ruff_cache/
+
+# Experiment output
+results/*
+!results/.gitkeep
+*.pcap
+*.log
+
+# Mininet
+*.mn
+
+# OS / editors
+.DS_Store
+.idea/
+.vscode/
