@@ -9,21 +9,17 @@ Built with the Ryu controller and the Mininet simulator.
 
 ## Topology: 4 switches, 9 hosts
 
+## Topology: 4 switches, 9 hosts
+
 ```mermaid
 graph TD
     s1(("s1 (core)"))
-    s1 === s2((s2))
+    s1 --- s2((s2))
     s1 --- s3((s3))
     s1 --- s4((s4))
-    s2 --- h1["h1 → h4"]
-    s2 --- h2["h2 → h7"]
-    s2 --- h3[h3]
-    s3 --- h4["h4 ← h1"]
-    s3 --- h5["h5 → h9"]
-    s3 --- h6[h6]
-    s4 --- h7["h7 ← h2"]
-    s4 --- h8[h8]
-    s4 --- h9["h9 ← h5"]
+    s2 --- h1 & h2 & h3
+    s3 --- h4 & h5 & h6
+    s4 --- h7 & h8 & h9
 ```
 
 UDP traffic (iperf) between host groups; the s1–s2 link carries several flows.
