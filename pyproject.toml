@@ -1,0 +1,25 @@
+[project]
+name = "team-sdn"
+version = "0.1.0"
+description = "PayLess-style adaptive network monitoring with Ryu and Mininet"
+readme = "README.md"
+requires-python = ">=3.9,<3.10"
+dependencies = [
+    "ryu==4.34",
+    # ryu 4.34 breaks on newer eventlet (ALREADY_HANDLED removed)
+    "eventlet==0.30.2",
+    "pandas",
+    "matplotlib",
+]
+
+[dependency-groups]
+dev = ["ruff"]
+
+[tool.uv]
+package = false
+# ryu's setup.py uses easy_install APIs removed in newer setuptools
+build-constraint-dependencies = ["setuptools<58"]
+
+[tool.ruff]
+target-version = "py39"
+line-length = 100
