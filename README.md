@@ -50,3 +50,12 @@ cd
 ```
 
 `topology/`, `scripts/` and `results/` are mounted, so edits on the host are visible without rebuilding.
+
+
+## Powiązane prace
+
+### OpenNetMon (NOMS 2014)
+
+> N. L. M. van Adrichem, C. Doerr, F. A. Kuipers, *"OpenNetMon: Network Monitoring in OpenFlow Software-Defined Networks"*, IEEE/IFIP NOMS 2014. [Kod](https://github.com/TUDelftNAS/SDN-OpenNetMon)
+
+OpenNetMon to moduł kontrolera POX, który dla każdego przepływu mierzy przepływność, straty pakietów i opóźnienie, korzystając wyłącznie ze standardowych wiadomości OpenFlow. Podobnie jak PayLess odpytuje switche adaptacyjnie: częściej, gdy ruch się zmienia, rzadziej, gdy jest stabilny. Autorzy pokazują też, że stały interwał nie nadąża za ruchem o charakterze burstów. Artykuł stanowi dla nas drugie, niezależne od PayLess uzasadnienie adaptacyjnego odpytywania switchy.
