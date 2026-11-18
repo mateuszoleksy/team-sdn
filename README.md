@@ -54,6 +54,12 @@ cd
 
 ## Powiązane prace
 
+### PayLess (NOMS 2014)
+
+> S. R. Chowdhury, M. F. Bari, R. Ahmed, R. Boutaba, "PayLess: A Low Cost Network Monitoring Framework for Software Defined Networks", IEEE/IFIP NOMS 2014. 
+
+PayLess to system monitorowania SDN wykorzystujący kontroler Floodlight. Dostosowuje częstotliwość zbierania statystyk OpenFlow do aktywności przepływów, ograniczając liczbę zapytań. W testach przeprowadzonych w Mininet autorzy uzyskali mniejszy narzut pomiarowy przy zachowaniu zbliżonej dokładności. W naszym projekcie wykorzystamy podobne podejście, ale będziemy monitorować porty i zmiany przepływności.
+
 ### OpenNetMon (NOMS 2014)
 
 > N. L. M. van Adrichem, C. Doerr, F. A. Kuipers, *"OpenNetMon: Network Monitoring in OpenFlow Software-Defined Networks"*, IEEE/IFIP NOMS 2014. [Kod](https://github.com/TUDelftNAS/SDN-OpenNetMon)
